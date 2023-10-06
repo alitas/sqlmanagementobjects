@@ -195,9 +195,7 @@ namespace Microsoft.SqlServer.Management.Smo
 			SortedList slDeps = new SortedList( new UrnComparer(this.server));
 			for( int depIdx = 0; depIdx < this.Dependencies.Count; depIdx++ )
 			{
-				// slDeps[(deplist[depIdx] as Dependency).Urn] = deplist[depIdx];
-				slDeps.Add( (deplist[depIdx] as Dependency).Urn, deplist[depIdx] );
-				
+				slDeps[(deplist[depIdx] as Dependency).Urn] = deplist[depIdx];
 			}
 
 
